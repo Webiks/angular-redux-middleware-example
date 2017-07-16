@@ -1,0 +1,10 @@
+li {
+  list-style-type: none;
+}
+li label {
+  font-size: 16px;
+  font-family: arial;
+  font-weight: 700;
+  color: #131a70;
+  cursor: pointer;
+}

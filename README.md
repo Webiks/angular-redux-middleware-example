@@ -1,12 +1,35 @@
-# AngularReduxMiddleware
+# Angular-Redux-Middleware
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.2.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) 
+version 1.2.1 & Angular version 4.3.0
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Starting up with angular/cli and angular-redux
 
-## Code scaffolding
+Run `ng new my-project` to create `angular/cli` project. then install 
+the following with `npm i <package> --save`:
+* flux-standard-action
+* [redux](https://github.com/reactjs/redux) Predictable state container for Javascript.
+* ?[redux-observable](https://github.com/redux-observable/redux-observable) Side-effect handling with Observables
+* [@angular-redux/store](https://github.com/angular-redux/store) Redux + Angular bindings
+* ?[@angular-redux/router](https://github.com/angular-redux/router) Time travel with the Angular router
+* ?[@angular-redux/form](https://github.com/angular-redux/form) Time travel with Angular forms
+* In addition, [Redux DevTools Chrome Extension](https://github.com/zalmoxisus/redux-devtools-extension) is recommanded.
+
+## Let's create a very simple app. 
+* all it does is add and delete items,which will be displayed using item-list component. 
+* Each item payload will be a simple string value.
+* For a more comperhensive example about using angular-redux see [Redux Zoo animals example](https://github.com/angular-redux/example-app)
+
+* `ng generate component list-control`
+* `ng generate component list-view`
+
+
+set view
+add component to app
+
+
+app.module - import NgReduxModule
 
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|module`.
 

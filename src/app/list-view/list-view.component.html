@@ -1,0 +1,8 @@
+<h3>List Items:</h3>
+
+<ul class="list-view">
+  <li *ngFor='let item of items | async; let i = index'>
+    <input type="radio" name="item-radio" [value]="i" [id]="'item' + i" (change)="selectItem(i)">
+    <label [for]="'item' + i">{{item}}</label>
+  </li>
+</ul>

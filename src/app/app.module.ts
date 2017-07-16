@@ -4,15 +4,23 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
+import { ListControlComponent } from './list-control/list-control.component';
+import { ListViewComponent } from './list-view/list-view.component';
+import { NgReduxModule } from '@angular-redux/store';
+import { StoreModule } from './store/store.module';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ListControlComponent,
+    ListViewComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    NgReduxModule,
+    StoreModule
   ],
   providers: [],
   bootstrap: [AppComponent]
