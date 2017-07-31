@@ -21,7 +21,7 @@ export class ListControlComponent implements OnInit {
       payload: value
     });
   }
-  deleteItems() {
+  deleteSelectedItem() {
     console.log('delete');
     this.ngRedux.dispatch({
       type: ItemsAPIActions.DELETE_ITEM,

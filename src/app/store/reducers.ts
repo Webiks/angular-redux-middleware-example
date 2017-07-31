@@ -9,13 +9,16 @@ export const rootReducer = function(state: AppState, action: ItemsAPIAction): Ap
     case ItemsAPIActions.ADD_ITEM:
       return tassign(state, {items: [...state.items, action.payload]});
     case ItemsAPIActions.DELETE_ITEM:
+      if (state.selected === -1) {
+        // no selected item - no change in state
+        return state;
+      }
       const currentItems = Array.from(state.items);
       currentItems.splice(state.selected, 1);
-      // console.log('foo', state.selected, Array.from(state.items).splice(state.selected, 1))
       return tassign(state, {
-          items: currentItems,
-          selected: -1
-        });
+        items: currentItems,
+        selected: -1
+      });
     case ItemsAPIActions.SELECT_ITEM:
       return tassign(state, {selected: action.payload});
   }
