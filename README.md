@@ -91,7 +91,7 @@ export function loggerMiddleware(store) {
   return function (next) {
     return function (action) {
       // log a fancy message and action
-      console.log('Hello from loggerMiddleware.', action)
+      console.log('Hello, this is your captain speaking.', action);
       // continue to the next action
       return next(action);
     };
